@@ -5,8 +5,6 @@ class Zeller
             month = 13
         elsif month == 2
             month = 14
-        else
-            month = month
         end
         m = month
         if month == 13 || 14
@@ -14,7 +12,7 @@ class Zeller
         else
             y = year
         end
-        weekday = (q + (((m+1)*26)/10).floor + y + (y/4).floor + (6*(y/100)).floor + (y/400).floor) % 7
+        weekday = (q + (((m+1)*26)/10) + y + (y/4) + (6*((y/100))) + (y/400)) % 7
         if weekday == 0
             final = "Saturday"
         elsif weekday == 1

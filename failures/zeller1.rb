@@ -137,15 +137,15 @@ class Zeller
     return final
   end
 
-  def self.calculate(dat, mon, cen_year, cen)
+  def self.calculate(dat, mon, year)
     q = date(dat)
-    p q
+    # puts q
     m = month(mon)
-    p m
-    k = century_year(cen_year)
-    p k
-    j = century(cen)
-    p j
+    # puts m
+    k = century_year(year)
+    # puts k
+    j = century(year)
+    # p j
     day = (q + ((13*(m+1))/5).floor + k + (k/4).floor + (j/4).floor + (5*j)) % 7
     if day == 0
       final = "Saturday"
