@@ -26,7 +26,7 @@ class Zeller
             final = "Sunday"        
         elsif weekday == 2
             final = "Monday"
-         elsif weekday == 3
+        elsif weekday == 3
             final = "Tuesday"        
         elsif weekday == 4
             final = "Wednesday"
@@ -45,7 +45,7 @@ class Print
         dayline = "Su Mo Tu We Th Fr Sa "
         month =  month.to_i
         fullmonth = Guts.monthify(month)
-        puts "#{fullmonth} #{year}".center(21)
+        puts "#{fullmonth} #{year}".center(20)
         puts dayline
         puts Guts.month(firstday, month, year)
     end
@@ -69,44 +69,44 @@ class Print
         # month2 = Guts.month(firstday2, 2, year)
         # month3 = Guts.month(firstday3, 3, year)
 
-        puts "#{year}".center(65)
+        puts "#{year}".center(63)
         puts ' '
-        puts "January".center(21) + " " + "February".center(21) + " " + "March".center(21) 
+        puts "January".center(20) + " " + "February".center(22) + " " + "March".center(20) 
         puts dayline + " " + dayline + " " + dayline
         print  Guts.yearline1(firstday1, firstday2, firstday3, 1, 2, 3 , year)
         print  Guts.yearline2(firstday1, firstday2, firstday3, 1, 2, 3 , year)
         print  Guts.yearline3(firstday1, firstday2, firstday3, 1, 2, 3 , year)
         print  Guts.yearline4(firstday1, firstday2, firstday3, 1, 2, 3 , year)
         print  Guts.yearline5(firstday1, firstday2, firstday3, 1, 2, 3 , year)
-        puts  Guts.yearline6(firstday1, firstday2, firstday3, 1, 2, 3 , year)
+        print  Guts.yearline6(firstday1, firstday2, firstday3, 1, 2, 3 , year)
         
-        puts "April".center(21) + " " + "May".center(21) + " " + "June".center(21) 
+        puts "April".center(20) + " " + "May".center(21) + " " + "June".center(22) 
         puts dayline + " " + dayline + " " + dayline
         print  Guts.yearline1(firstday4, firstday5, firstday6, 4, 5, 6 , year)
         print  Guts.yearline2(firstday4, firstday5, firstday6, 4, 5, 6 , year)
         print  Guts.yearline3(firstday4, firstday5, firstday6, 4, 5, 6 , year)
         print  Guts.yearline4(firstday4, firstday5, firstday6, 4, 5, 6 , year)
         print  Guts.yearline5(firstday4, firstday5, firstday6, 4, 5, 6 , year)
-        puts  Guts.yearline6(firstday4, firstday5, firstday6, 4, 5, 6 , year)
+        print  Guts.yearline6(firstday4, firstday5, firstday6, 4, 5, 6 , year)
 
-        puts "July".center(21) + " " + "August".center(21) + " " + "September".center(21) 
+        puts "July".center(21) + " " + "August".center(21) + " " + "September".center(20) 
         puts dayline + " " + dayline + " " + dayline
         print  Guts.yearline1(firstday7, firstday8, firstday9, 7, 8, 9 , year)
         print  Guts.yearline2(firstday7, firstday8, firstday9, 7, 8, 9 , year)
         print  Guts.yearline3(firstday7, firstday8, firstday9, 7, 8, 9 , year)
         print  Guts.yearline4(firstday7, firstday8, firstday9, 7, 8, 9 , year)
         print  Guts.yearline5(firstday7, firstday8, firstday9, 7, 8, 9 , year)
-        puts  Guts.yearline6(firstday7, firstday8, firstday9, 7, 8, 9 , year)
+        print  Guts.yearline6(firstday7, firstday8, firstday9, 7, 8, 9 , year)
 
 
-        puts "October".center(21) + " " + "November".center(21) + " " + "December".center(21) 
+        puts "October".center(20) + " " + "November".center(22) + "December".center(22)  
         puts dayline + " " + dayline + " " + dayline
         print  Guts.yearline1(firstday10, firstday11, firstday12, 10, 11, 12 , year)
         print  Guts.yearline2(firstday10, firstday11, firstday12, 10, 11, 12 , year)
         print  Guts.yearline3(firstday10, firstday11, firstday12, 10, 11, 12 , year)
         print  Guts.yearline4(firstday10, firstday11, firstday12, 10, 11, 12 , year)
         print  Guts.yearline5(firstday10, firstday11, firstday12, 10, 11, 12 , year)
-        puts  Guts.yearline6(firstday10, firstday11, firstday12, 10, 11, 12 , year)
+        print  Guts.yearline6(firstday10, firstday11, firstday12, 10, 11, 12 , year)
 
 
 

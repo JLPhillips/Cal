@@ -250,6 +250,28 @@ class Guts
         end
     end
 
+    # def self.sixthline(firstday, month)
+    #     thirty = [4,6,9,11]
+    #     thirtyone = [1,3,5,7,8,10,12]
+    #     if thirty.include?(month)
+    #         if firstday != 0
+    #             print "\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s"
+    #         else
+    #             print "30\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s"
+    #         end
+    #     elsif thirtyone.include?(month)
+    #         if firstday != 6 && firstday != 0
+    #             print "\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s"
+    #         elsif firstday == 6
+    #             print "31\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s"
+    #         elsif firstday == 0
+    #             print "30\s31\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s" 
+    #         end
+    #     elsif month == 2
+    #         print "\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s"
+    #     end
+    # end
+
     def self.sixthline(firstday, month)
         thirty = [4,6,9,11]
         thirtyone = [1,3,5,7,8,10,12]
@@ -260,12 +282,12 @@ class Guts
                 print "30\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s"
             end
         elsif thirtyone.include?(month)
-            if firstday != (6||0)
+            if firstday != 6 && firstday != 0
                 print "\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s"
             elsif firstday == 6
                 print "31\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s"
             elsif firstday == 0
-                print "30\s\s31\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s" 
+                print "30\s31\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s" 
             end
         elsif month == 2
             print "\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s"
