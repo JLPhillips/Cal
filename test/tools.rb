@@ -18,25 +18,25 @@ class Zeller
         return weekday
     end
 
-    def self.actuate(date,month,year)
-        weekday = calculate(date, month, year)
-        if weekday == 0
-            final = date_array[0]
-        elsif weekday == 1
-            final = "Sunday"        
-        elsif weekday == 2
-            final = "Monday"
-        elsif weekday == 3
-            final = "Tuesday"        
-        elsif weekday == 4
-            final = "Wednesday"
-        elsif weekday == 5
-            final = "Thursday"        
-        elsif weekday == 6
-            final = "Friday"
-        end
-        return final
-    end
+    # def self.actuate(date,month,year)
+    #     weekday = calculate(date, month, year)
+    #     if weekday == 0
+    #         final = date_array[0]
+    #     elsif weekday == 1
+    #         final = "Sunday"        
+    #     elsif weekday == 2
+    #         final = "Monday"
+    #     elsif weekday == 3
+    #         final = "Tuesday"        
+    #     elsif weekday == 4
+    #         final = "Wednesday"
+    #     elsif weekday == 5
+    #         final = "Thursday"        
+    #     elsif weekday == 6
+    #         final = "Friday"
+    #     end
+    #     return final
+    # end
 end
 
 class Print
@@ -47,7 +47,7 @@ class Print
         fullmonth = Guts.monthify(month)
         puts "#{fullmonth} #{year}".center(20)
         puts dayline
-        puts Guts.month(firstday, month, year)
+        print Guts.month(firstday, month, year)
     end
     
     def self.year(year)
@@ -64,10 +64,6 @@ class Print
         firstday11 = Zeller.calculate(1, 11, year)
         firstday12 = Zeller.calculate(1, 12, year)
         dayline = "Su Mo Tu We Th Fr Sa "
-
-        # month1 = Guts.month(firstday1, 1, year)
-        # month2 = Guts.month(firstday2, 2, year)
-        # month3 = Guts.month(firstday3, 3, year)
 
         puts "#{year}".center(63)
         puts ' '
@@ -107,21 +103,6 @@ class Print
         print  Guts.yearline4(firstday10, firstday11, firstday12, 10, 11, 12 , year)
         print  Guts.yearline5(firstday10, firstday11, firstday12, 10, 11, 12 , year)
         print  Guts.yearline6(firstday10, firstday11, firstday12, 10, 11, 12 , year)
-
-
-
-        # puts ' '
-        # firstday = Zeller.calculate(1, 1, year)
-        # dayline = "Su Mo Tu We Th Fr Sa "
-        # month =  month.to_i
-        # fullmonth = Guts.monthify(month)
-        # monthline = "#{fullmonth}".center(21) 
-        # puts "#{year}".center(65)
-        # 4.times do
-        #     puts monthline + " " + monthline + " " +  monthline
-        #     puts dayline + " " + dayline + " " + dayline
-        #     puts actualmonth + " " + actualmonth + " " + actualmonth
-        # end
     end
 end
 

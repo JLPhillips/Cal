@@ -1,44 +1,44 @@
 class Zeller
-  # def self.weekday(day)
-  #   if day.is_a?(String) && day.size > 2
-  #     day = day.downcase[0..1]
-  #     if day == "sa"
-  #       final = 0
-  #     elsif day == "su"
-  #       final = 1
-  #     elsif day == "mo"
-  #       final = 2
-  #     elsif day == "tu"
-  #       final = 3
-  #     elsif day == "we"
-  #       final = 4
-  #     elsif day == "th"
-  #       final = 5
-  #     elsif day == "fr"
-  #       final = 6
-  #     end
-  #   elsif day.is_a?(String) && day.size <= 2 || day.is_a?(Integer)
-  #     day = day.to_i
-  #     if day == 0
-  #       final = "Saturday"
-  #     elsif day == 1
-  #       final = "Sunday"
-  #     elsif day == 2
-  #       final = "Monday"
-  #     elsif day == 3
-  #       final = "Tuesday"
-  #     elsif day == 4
-  #       final = "Wednesday"
-  #     elsif day == 5
-  #       final = "Thursday"
-  #     elsif day == 6
-  #       final = "Friday"
-  #     end
-  #   else
-  #     return "Weekday Fail"
-  #   end
-  #   return final
-  # end
+  def self.weekday(day)
+    if day.is_a?(String) && day.size > 2
+      day = day.downcase[0..1]
+      if day == "sa"
+        final = 0
+      elsif day == "su"
+        final = 1
+      elsif day == "mo"
+        final = 2
+      elsif day == "tu"
+        final = 3
+      elsif day == "we"
+        final = 4
+      elsif day == "th"
+        final = 5
+      elsif day == "fr"
+        final = 6
+      end
+    elsif day.is_a?(String) && day.size <= 2 || day.is_a?(Integer)
+      day = day.to_i
+      if day == 0
+        final = "Saturday"
+      elsif day == 1
+        final = "Sunday"
+      elsif day == 2
+        final = "Monday"
+      elsif day == 3
+        final = "Tuesday"
+      elsif day == 4
+        final = "Wednesday"
+      elsif day == 5
+        final = "Thursday"
+      elsif day == 6
+        final = "Friday"
+      end
+    else
+      return "Weekday Fail"
+    end
+    return final
+  end
 
   def self.date(date)
     if date.is_a?(String) && date.size == 4

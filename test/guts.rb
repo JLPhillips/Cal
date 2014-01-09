@@ -78,16 +78,6 @@ class Guts
         puts line_array.join("")
     end
 
-    # def self.year(date, month, year)
-    #     line = firstline(date)
-    #     line2 = firstline(date+1)
-    #     line3 = firstline(date+2)
-    #     line_array = [line,line2,line3]
-    #     puts line_array.join("  ")
-
-    #     puts Zap.year(date, month, year)
-    # end
-
     def self.month(firstday, month, year)
         puts firstline(firstday)
         puts secondline(firstday)
@@ -250,28 +240,6 @@ class Guts
         end
     end
 
-    # def self.sixthline(firstday, month)
-    #     thirty = [4,6,9,11]
-    #     thirtyone = [1,3,5,7,8,10,12]
-    #     if thirty.include?(month)
-    #         if firstday != 0
-    #             print "\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s"
-    #         else
-    #             print "30\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s"
-    #         end
-    #     elsif thirtyone.include?(month)
-    #         if firstday != 6 && firstday != 0
-    #             print "\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s"
-    #         elsif firstday == 6
-    #             print "31\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s"
-    #         elsif firstday == 0
-    #             print "30\s31\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s" 
-    #         end
-    #     elsif month == 2
-    #         print "\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s"
-    #     end
-    # end
-
     def self.sixthline(firstday, month)
         thirty = [4,6,9,11]
         thirtyone = [1,3,5,7,8,10,12]
@@ -294,18 +262,3 @@ class Guts
         end
     end
 end
-
-    # yep = month[0..2].chomp.downcase if month.is_a?(String)
-    #date_array = (1...31).to_a
-    # [" ","1"," "," ","2"," "," ","3"," "," ","4"," "," ","5"," "," ","6"," "," " ,"7", " "]
-    # 12.times do print "\s" end
-    # puts " Su Mo Tu We Th Fr Sa "
-    # date_array = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-    # if firstday = 1 then print ["/s"] * 1
-    # If 1, starts at 2
-    # If 2, starts at 5
-    # If 3, starts at 8
-    # If 4, starts at 11
-    # If 5, starts at 14
-    # If 6, starts at 17
-    # If 0, starts at 20
